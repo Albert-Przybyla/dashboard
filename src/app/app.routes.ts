@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { Route, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { ResidentialProxiesComponent } from './pages/residential-proxies/residential-proxies.component';
 import { StaticProxiesComponent } from './pages/static-proxies/static-proxies.component';
@@ -62,6 +62,6 @@ export const routes: Routes = [
   },
 ];
 
-export const getRoutesForApp = (): any[] => {
-  return routes.filter((x) => x.data).map((x) => x.data);
+export const getRoutesForApp = (): Route[] => {
+  return routes.filter((x) => x.data);
 };

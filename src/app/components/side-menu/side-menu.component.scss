@@ -1,0 +1,9 @@
+.nav-top-underline {
+  border-bottom: 0.5px solid white;
+}
+
+ul {
+  .nav-link {
+    transition: all 0.5s ease-in-out;
+  }
+}

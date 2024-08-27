@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
+import { getRoutesForApp } from '../../app.routes';
+import { Route, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-side-menu',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './side-menu.component.html',
-  styleUrl: './side-menu.component.scss'
+  styleUrl: './side-menu.component.scss',
 })
 export class SideMenuComponent {
-
+  protected routes: Route[] = getRoutesForApp();
 }
