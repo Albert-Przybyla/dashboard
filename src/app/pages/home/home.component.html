@@ -1,12 +1,84 @@
 <div class="row">
-  <div class="col">
-    <div class="card">das</div>
+  <div class="col-12 col-md-6 col-xl">
+    <div class="card">
+      <div class="card-header d-flex justify-content-between">
+        <h6>Loyalty Status</h6>
+        <p>Restarting: <span class="heading-color">5:14:54:54</span></p>
+      </div>
+      <div class="card-body">
+        <div class="loyalty-data">
+          <div class="pointer">
+            <div class="label">
+              <p class="mb-1">Monthly&nbsp;Status</p>
+              <h5>
+                {{ 233 | currency }}
+                <span class="badge badge-secondary">Silver</span>
+              </h5>
+            </div>
+          </div>
+
+          <div class="pointer" [style]="{ left: '60%' }">
+            <div class="label">
+              <p class="mb-1">Gold</p>
+              <h5>
+                {{ 275 | currency }}
+              </h5>
+            </div>
+          </div>
+        </div>
+        <app-progress-bar [progress]="57" style="z-index: 2"></app-progress-bar>
+        <div class="input-group my-2 mt-5">
+          <input
+            #input
+            disabled="true"
+            type="text"
+            class="form-control"
+            value="promocode25"
+          />
+          <div class="input-group-text" (click)="copy()">Copy</div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="col">
-    <div class="card">das</div>
+  <div class="col-12 col-md-6 col-xl">
+    <div class="card">
+      <div class="card-header">
+        <h6>Announcements</h6>
+        <ul class="nav nav-underline">
+          <li class="nav-item">
+            <a class="nav-link active">general</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">Status</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">Promotions</a>
+          </li>
+        </ul>
+      </div>
+      <div class="card-body"></div>
+    </div>
   </div>
-  <div class="col-3">
-    <div class="card">das</div>
+  <div class="col-sm col-md-12 col-xl-3 col-xxl-2">
+    <div class="card">
+      <div class="card-header">
+        <h6>Help Center</h6>
+      </div>
+      <div class="card-body d-flex flex-column">
+        <button class="btn btn-secondary my-1 text-start">
+          <i class="bi bi-file-earmark-text me-2"></i>Insert VAT
+        </button>
+        <button class="btn btn-secondary my-1 text-start">
+          <i class="bi bi-question-circle me-2"></i>FAQ
+        </button>
+        <button class="btn btn-secondary my-1 text-start">
+          <i class="bi bi-gear me-2"></i>Troubleshooting
+        </button>
+        <button class="btn btn-primary my-1 text-start">
+          <i class="bi bi-people me-2"></i>Talk to Support
+        </button>
+      </div>
+    </div>
   </div>
 </div>
 <div class="row">

@@ -1,6 +1,6 @@
 @import "../node_modules/bootstrap/scss/functions";
 
-$body-bg: #14161c;
+$body-bg: #0e0f10;
 $text-color: #e6e6e6;
 $body-color: #6b6c70;
 $headings-color: $text-color;
@@ -33,17 +33,29 @@ $table-cell-vertical-align: center;
 $table-striped-color: red;
 $table-border-color: darken($body-color, 20%);
 
-th {
-  color: $text-color !important;
-}
-
-$enable-dark-mode: false;
+$card-bg: #111215;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
-@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
 
 @import "../node_modules/bootstrap/scss/maps";
 @import "../node_modules/bootstrap/scss/mixins";
 @import "../node_modules/bootstrap/scss/root";
+
+th {
+  color: $text-color !important;
+}
+
+.underline {
+  border-color: darken($body-color, 20%) !important;
+}
+
+.btn > i {
+  font-size: 1.2rem;
+}
+
+.badge-secondary {
+  background-color: $body-color;
+}
