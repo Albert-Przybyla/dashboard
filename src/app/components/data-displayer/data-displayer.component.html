@@ -1,0 +1,26 @@
+<table class="table">
+  <thead #title>
+    <ng-content select="[header]"></ng-content>
+  </thead>
+  @if(loading){
+  <tbody @fadeOut>
+    @for(el of [].constructor(10); track i; let i = $index){
+    <tr class="placeholder-glow">
+      <th>
+        <span style="max-width: 40px" class="placeholder"
+          >&nbsp;&nbsp;&nbsp;</span
+        >
+      </th>
+      <th colspan="20">
+        <span class="placeholder col-5 m-1 p-1">&nbsp;</span>
+      </th>
+    </tr>
+
+    }
+  </tbody>
+  }@else {
+  <tbody style="position: relative" @fadeIn>
+    <ng-content select="[body]"></ng-content>
+  </tbody>
+  }
+</table>

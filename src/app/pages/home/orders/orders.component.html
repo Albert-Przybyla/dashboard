@@ -1,0 +1,28 @@
+<app-data-displayer [loading]="loading" (pageChange)="getData($event)">
+  <tr header>
+    <th scope="col">#ID</th>
+    <th scope="col">Product</th>
+    <th scope="col">Date</th>
+    <th scope="col">Quantity</th>
+    <th scope="col">Status</th>
+    <th scope="col">Total</th>
+    <th scope="col">Actions</th>
+  </tr>
+  <ng-container body>
+    @for(item of items; track item; let i = $index){
+    <tr>
+      <td>#{{ item.id }}</td>
+      <td>{{ item.product }}</td>
+      <td>{{ item.date | date : "dd MMM yyyy" }}</td>
+      <td>{{ item.quantity }}</td>
+      <td>{{ item.status }}</td>
+      <td>{{ item.Total }}</td>
+      <td>
+        <span>
+          <a class="btn btn-outline-secondary">Download Invoice</a>
+        </span>
+      </td>
+    </tr>
+    }
+  </ng-container>
+</app-data-displayer>

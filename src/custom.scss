@@ -1,3 +1,5 @@
+@import "../node_modules/bootstrap/scss/functions";
+
 $body-bg: #14161c;
 $text-color: #e6e6e6;
 $body-color: #6b6c70;
@@ -24,11 +26,21 @@ $link-color: $body-color;
 $nav-pills-link-active-color: $body-color;
 $nav-pills-link-active-bg: $text-color;
 
+$table-bg: transparent;
+$table-color: $body-color;
+$table-cell-padding-y: 0.75rem;
+$table-cell-vertical-align: center;
+$table-striped-color: red;
+$table-border-color: darken($body-color, 20%);
+
+th {
+  color: $text-color !important;
+}
+
 $enable-dark-mode: false;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
-@import "../node_modules/bootstrap/scss/functions";
 
 @import "../node_modules/bootstrap/scss/variables";
 
