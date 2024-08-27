@@ -15,11 +15,11 @@
     <p class="py-2 px-1 m-0">
       <small> Main menu </small>
     </p>
-    <ul class="nav nav-pills nav-fill flex-column">
+    <ul class="nav nav-pills flex-column">
       @for(route of routes; track route){
-      <li class="nav-item">
+      <li class="nav-item color-muted">
         <a
-          class="nav-link text-start"
+          class="nav-link text-start color-muted"
           [routerLink]="['pages', route.path]"
           routerLinkActive="active"
         >
