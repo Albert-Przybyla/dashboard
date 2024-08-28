@@ -48,7 +48,7 @@ $table-bg: transparent;
 $table-color: $body-color;
 $table-cell-padding-y: 0.75rem;
 $table-cell-vertical-align: center;
-$table-border-color: darken($body-color, 20%);
+$table-border-color: #232428;
 
 $font-family-sans-serif: Inter;
 $font-size-base: 1.0625rem;
@@ -103,8 +103,18 @@ table {
   background-color: $body-bg;
 }
 
+.nav-underline .nav-link.active {
+  position: relative;
+  top: 2px;
+  border-width: 1px !important;
+}
+
 .underline {
-  border-color: darken($body-color, 20%) !important;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  border-bottom: 0.025rem solid #232428 !important;
+  border-color: #232428 !important;
 }
 
 .btn > i {
@@ -147,7 +157,7 @@ table {
 
 tr:last-child {
   td {
-    border-bottom: 10px !important;
+    border-bottom: none !important;
   }
 }
 
