@@ -5,6 +5,11 @@
   src: url("../public/font/Inter.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "icon";
+  src: url("../public/font/icons.ttf") format("truetype");
+}
+
 $body-bg: #0e0f10;
 $text-color: #fbfcfe;
 $body-color: #7e7f83;
@@ -47,6 +52,9 @@ $font-family-sans-serif: Inter;
 $font-size-base: 1.0625rem;
 $headings-font-weight: 400;
 $card-bg: #16171b;
+$card-cap-padding-y: 8px;
+$card-cap-padding-x: 16px;
+$card-cap-bg: transparent;
 
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
@@ -99,10 +107,27 @@ td:last-child {
   width: 200px;
 }
 
-.card {
-  --bs-card-cap-bg: transparent !important;
-}
-
 .btn {
   box-shadow: 0px 1px 1px 0px #ffffff33 inset;
+}
+
+.card {
+  .card-header {
+    padding-top: 16px;
+  }
+
+  .card-body {
+    padding: 8px 16px 16px 16px;
+  }
+}
+
+.test {
+  font-family: icon;
+}
+.icon {
+  position: relative;
+  top: -1px;
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }

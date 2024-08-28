@@ -27,7 +27,7 @@ export const routes: Routes = [
         component: HomeComponent,
         data: {
           label: 'Home',
-          icon: 'bi-house',
+          icon: 'icons/home.svg',
         },
       },
       {
@@ -35,7 +35,7 @@ export const routes: Routes = [
         component: ResidentialProxiesComponent,
         data: {
           label: 'Residential Proxies',
-          icon: 'bi-globe',
+          icon: 'icons/resi-proxies.svg',
         },
       },
       {
@@ -43,7 +43,7 @@ export const routes: Routes = [
         component: StaticProxiesComponent,
         data: {
           label: 'Static Proxies',
-          icon: 'bi-box',
+          icon: 'icons/static-proxies.svg',
         },
       },
       {
@@ -51,7 +51,7 @@ export const routes: Routes = [
         component: HybridProxiesComponent,
         data: {
           label: 'Hybrid Proxies',
-          icon: 'bi-lamp',
+          icon: 'icons/hybrid-proxies.svg',
         },
       },
       {
@@ -59,7 +59,7 @@ export const routes: Routes = [
         component: BundlesComponent,
         data: {
           label: 'Bundles',
-          icon: 'bi-box-seam',
+          icon: 'icons/bundles.svg',
         },
       },
       {
@@ -67,7 +67,7 @@ export const routes: Routes = [
         component: ProgramsComponent,
         data: {
           label: 'Programs',
-          icon: 'bi-window',
+          icon: 'icons/programs.svg',
         },
       },
     ],

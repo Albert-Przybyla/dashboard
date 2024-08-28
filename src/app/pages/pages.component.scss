@@ -3,3 +3,10 @@
   min-height: calc(100vh - 2rem);
   border-color: #2b2c2e;
 }
+.card-header {
+  padding: 12px 12px 12px 18px !important;
+  border-bottom: 1px solid #2b2c2e;
+}
+.btn-no-shadow {
+  box-shadow: none !important;
+}

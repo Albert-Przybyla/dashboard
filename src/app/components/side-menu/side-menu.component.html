@@ -25,7 +25,8 @@
           [routerLink]="['pages', route.path]"
           routerLinkActive="active"
         >
-          <i class="bi" [class]="route.data!['icon']"></i>
+          <i class="bi" [class]=""></i>
+          <img [src]="route.data!['icon']" class="icon" alt="Icon" />
           &nbsp;
           <span>{{ route.data!["label"] }}</span>
         </a>

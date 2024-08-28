@@ -16,6 +16,8 @@
     top: 0;
     left: 0;
     height: 100%;
+    width: 0px;
     background-color: var(--bs-primary);
+    transition: width 1.5s ease-out;
   }
 }
