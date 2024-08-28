@@ -16,13 +16,13 @@
       </td>
       <td>{{ item.product }}</td>
       <td>{{ item.date | date : "dd MMM yyyy" }}</td>
-      <td>{{ item.quantity }}</td>
+      <td>{{ item.quantity }}GB</td>
       <td>
         <span class="badge" [ngClass]="getStatusColor(item.status)">
           <span class="dot me-2 ms-1"></span>{{ stauses[item.status] }}</span
         >
       </td>
-      <td>{{ item.Total }}</td>
+      <td>{{ item.Total | currency }}</td>
       <td>
         <span>
           <button class="btn btn-outline-secondary">Download Invoice</button>
