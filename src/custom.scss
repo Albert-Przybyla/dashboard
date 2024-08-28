@@ -1,8 +1,13 @@
 @import "../node_modules/bootstrap/scss/functions";
 
+@font-face {
+  font-family: "Inter";
+  src: url("../public/font/Inter.ttf") format("truetype");
+}
+
 $body-bg: #0e0f10;
-$text-color: #e6e6e6;
-$body-color: #6b6c70;
+$text-color: #fbfcfe;
+$body-color: #7e7f83;
 $headings-color: $text-color;
 $primary-color: #ff6c37;
 $secondary-color: #2b2d38;
@@ -21,10 +26,15 @@ $yellow: #ffc107;
 $green: #198754;
 $teal: #20c997;
 $cyan: #0dcaf0;
+$secondary: #272b30;
+$secondary-color: #272b30;
 
 $link-color: $body-color;
-$nav-pills-link-active-color: $body-color;
-$nav-pills-link-active-bg: $text-color;
+
+$card-border-radius: 16px;
+
+$nav-pills-link-active-bg: $secondary;
+$nav-pills-link-active-color: $text-color;
 
 $table-bg: transparent;
 $table-color: $body-color;
@@ -33,19 +43,28 @@ $table-cell-vertical-align: center;
 $table-striped-color: red;
 $table-border-color: darken($body-color, 20%);
 
-$card-bg: #111215;
+$font-family-sans-serif: Inter;
+$font-size-base: 1.0625rem;
+$headings-font-weight: 400;
+$card-bg: #16171b;
 
-@import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
+@import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/variables-dark";
 
 @import "../node_modules/bootstrap/scss/maps";
 @import "../node_modules/bootstrap/scss/mixins";
 @import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 th {
   color: $text-color !important;
+  border: none !important;
+}
+
+table {
+  margin: 0 !important;
 }
 
 .underline {
@@ -58,4 +77,32 @@ th {
 
 .badge-secondary {
   background-color: $body-color;
+}
+
+.ci-settings {
+  background: url("data:image/svg+xml;utf8,http://localhost:62698/icons/copy.svg");
+  width: 16px;
+  height: 16px;
+}
+
+.text-seconadry {
+  color: #7e7f83 !important;
+}
+
+tr:last-child {
+  td {
+    border-bottom: 10px !important;
+  }
+}
+
+td:last-child {
+  width: 200px;
+}
+
+.card {
+  --bs-card-cap-bg: transparent !important;
+}
+
+.btn {
+  box-shadow: 0px 1px 1px 0px #ffffff33 inset;
 }

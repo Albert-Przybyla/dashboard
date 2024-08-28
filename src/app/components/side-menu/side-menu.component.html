@@ -19,9 +19,9 @@
     </p>
     <ul class="nav nav-pills flex-column">
       @for(route of routes; track route){
-      <li class="nav-item color-muted">
+      <li class="nav-item">
         <a
-          class="nav-link text-start color-muted"
+          class="nav-link text-start"
           [routerLink]="['pages', route.path]"
           routerLinkActive="active"
         >
