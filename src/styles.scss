@@ -13,11 +13,16 @@ body {
   height: 100%;
 }
 
+@media screen and (min-width: 769px) {
+  .md-position-fixed {
+    position: fixed !important;
+  }
+}
 @media screen and (max-width: 768px) {
   .fixed-sm-top {
     position: fixed;
     z-index: 1000;
-    background-color: var(--bs-body-bg);
+    background-color: #16171b;
     height: 100vh;
     transform: translateX(-100%);
     transition: all 0.2s ease-out;

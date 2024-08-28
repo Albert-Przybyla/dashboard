@@ -1,0 +1,41 @@
+<div class="list-group">
+  @if(loading){
+  <div class="list-group-item">
+    <div class="d-flex w-100 justify-content-between mb-2">
+      <div class="d-flex align-items-center">
+        <span class="placeholder img-load me-3">&nbsp;</span>
+        <div>
+          <h5 class="mb-1">
+            <span class="placeholder p-2" style="width: 100px"></span>
+          </h5>
+          <small>
+            <span class="placeholder p-0" style="width: 70px"></span
+          ></small>
+        </div>
+      </div>
+      <small class="text-muted">
+        <span class="placeholder" style="width: 40px"></span>
+      </small>
+    </div>
+    <p class="mb-1">
+      <span class="placeholder col-9 m-1 p-1">&nbsp;</span>
+    </p>
+  </div>
+  } @else { @for(item of items; track item; let i = $index){
+  <div class="list-group-item">
+    <div class="d-flex w-100 justify-content-between mb-2">
+      <div class="d-flex align-items-center">
+        <img [src]="item.icon" alt="Icon" class="icon-class me-3" />
+        <div>
+          <h5 class="mb-1">{{ item.title }}</h5>
+          <small>{{ item.subTitle }}</small>
+        </div>
+      </div>
+      <small class="text-muted">14h ago</small>
+    </div>
+    <p class="mb-1">
+      {{ item.description }}
+    </p>
+  </div>
+  } }
+</div>

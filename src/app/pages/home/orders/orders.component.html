@@ -11,11 +11,17 @@
   <ng-container body>
     @for(item of items; track item; let i = $index){
     <tr>
-      <td>#{{ item.id }}</td>
+      <td>
+        <img src="icons/copy.svg" class="icon me-1" alt="Icon" />#{{ item.id }}
+      </td>
       <td>{{ item.product }}</td>
       <td>{{ item.date | date : "dd MMM yyyy" }}</td>
       <td>{{ item.quantity }}</td>
-      <td>{{ item.status }}</td>
+      <td>
+        <span class="badge" [ngClass]="getStatusColor(item.status)">
+          <span class="dot me-2 ms-1"></span>{{ stauses[item.status] }}</span
+        >
+      </td>
       <td>{{ item.Total }}</td>
       <td>
         <span>

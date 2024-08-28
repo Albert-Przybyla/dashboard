@@ -16,7 +16,7 @@ export class TmpDataService {
       title: 'TheDuke',
       subTitle: 'On general',
       date: new Date(),
-      icon: '',
+      icon: 'img/announcement.png',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     },
@@ -25,7 +25,7 @@ export class TmpDataService {
       title: 'TheDuke',
       subTitle: 'On general',
       date: new Date(),
-      icon: '',
+      icon: 'img/announcement.png',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     },
@@ -34,16 +34,7 @@ export class TmpDataService {
       title: 'TheDuke',
       subTitle: 'On general',
       date: new Date(),
-      icon: '',
-      description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-    },
-    {
-      id: 4,
-      title: 'TheDuke',
-      subTitle: 'On general',
-      date: new Date(),
-      icon: '',
+      icon: 'img/announcement.png',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     },
@@ -55,7 +46,7 @@ export class TmpDataService {
       product: 'Static proxies',
       date: new Date(),
       quantity: 4,
-      status: status.waiting,
+      status: status.Waiting,
       Total: 33,
     },
     {
@@ -63,7 +54,7 @@ export class TmpDataService {
       product: 'Residential proxies',
       date: new Date(),
       quantity: 4,
-      status: status.active,
+      status: status.Active,
       Total: 33,
     },
     {
@@ -71,7 +62,7 @@ export class TmpDataService {
       product: 'hybrid proxies',
       date: new Date(),
       quantity: 4,
-      status: status.expired,
+      status: status.Expired,
       Total: 33,
     },
     {
@@ -79,7 +70,7 @@ export class TmpDataService {
       product: 'hybrid proxies',
       date: new Date(),
       quantity: 4,
-      status: status.active,
+      status: status.Active,
       Total: 33,
     },
     {
@@ -87,7 +78,7 @@ export class TmpDataService {
       product: 'Static proxies',
       date: new Date(),
       quantity: 4,
-      status: status.waiting,
+      status: status.Waiting,
       Total: 33,
     },
     {
@@ -95,7 +86,7 @@ export class TmpDataService {
       product: 'Static proxies',
       date: new Date(),
       quantity: 4,
-      status: status.waiting,
+      status: status.Waiting,
       Total: 33,
     },
   ];
@@ -110,7 +101,7 @@ export class TmpDataService {
       content: this.announcements.slice(startIndex, endIndex),
       currentPage: pageNumber,
       totalPages: Math.ceil(this.announcements.length / pageSize),
-    }).pipe(delay(2000));
+    }).pipe(delay(1000));
   }
 
   public getOrders(

@@ -42,11 +42,12 @@ $card-border-radius: 16px;
 $nav-pills-link-active-bg: $secondary;
 $nav-pills-link-active-color: $text-color;
 
+$link-color-dark: $body-color;
+
 $table-bg: transparent;
 $table-color: $body-color;
 $table-cell-padding-y: 0.75rem;
 $table-cell-vertical-align: center;
-$table-striped-color: red;
 $table-border-color: darken($body-color, 20%);
 
 $font-family-sans-serif: Inter;
@@ -56,6 +57,7 @@ $card-bg: #16171b;
 $card-cap-padding-y: 8px;
 $card-cap-padding-x: 16px;
 $card-cap-bg: transparent;
+$card-border-color: transparent;
 
 $input-disabled-color: #7e7f83;
 $input-disabled-bg: #151518;
@@ -69,6 +71,11 @@ $input-padding-x: 10px;
 $input-btn-padding-y: 10px;
 $input-btn-padding-x: 10px;
 
+$nav-underline-link-active-color: $text-color;
+
+$list-group-bg: transparent;
+$list-group-border-color: transparent;
+
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
 @import "../node_modules/bootstrap/scss/variables";
@@ -79,6 +86,10 @@ $input-btn-padding-x: 10px;
 @import "../node_modules/bootstrap/scss/root";
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+* {
+  font-weight: 400 !important;
+}
+
 th {
   color: $text-color !important;
   border: none !important;
@@ -86,6 +97,10 @@ th {
 
 table {
   margin: 0 !important;
+}
+
+.sticky-top {
+  background-color: $body-bg;
 }
 
 .underline {
@@ -98,6 +113,21 @@ table {
 
 .badge-secondary {
   background-color: $body-color;
+}
+
+.badge-next {
+  background: #2b3324;
+  color: #b1f55a;
+}
+
+.badge-warning {
+  background: #363627;
+  color: #f5e65a;
+}
+
+.badge-danger {
+  background: #41292f;
+  color: #fa5555;
 }
 
 .ci-settings {
@@ -147,6 +177,11 @@ td:last-child {
   width: 22px;
   height: 22px;
   fill: currentColor;
+}
+
+.icon-sm {
+  width: 18px;
+  height: 18px;
 }
 
 .input-group-text {

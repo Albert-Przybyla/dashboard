@@ -1,8 +1,11 @@
 <div class="row">
   <div class="col-12 col-lg-12 col-xl">
-    <div class="card" style="height: 100%">
+    <div class="card">
       <div class="card-header d-flex justify-content-between sm-flex-column">
-        <h6 class="sm-w-100">Loyalty Status</h6>
+        <h6 class="sm-w-100">
+          Loyalty Status
+          <img src="icons/info.svg" class="icon icon-sm me-1" alt="Icon" />
+        </h6>
         <p class="sm-w-100">
           Restarting: <span class="heading-color">5:14:54:54</span>
         </p>
@@ -14,7 +17,7 @@
               <p class="mb-1">Monthly&nbsp;Status</p>
               <h5>
                 {{ 233 | currency }}
-                <span class="badge badge-secondary">Silver</span>
+                <span class="badge badge-status">Silver</span>
               </h5>
             </div>
           </div>
@@ -45,26 +48,30 @@
     </div>
   </div>
   <div class="col-12 col-lg-12 col-xl">
-    <div class="card" style="height: 100%">
+    <div class="card">
       <div class="card-header">
         <h6>Announcements</h6>
         <ul class="nav nav-underline">
-          <li class="nav-item">
-            <a class="nav-link active">general</a>
+          <li class="nav-item me-3">
+            <a class="nav-link active"
+              >general<span class="badge badge-notification ms-3">3</span>
+            </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item me-3">
             <a class="nav-link">Status</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item me-3">
             <a class="nav-link">Promotions</a>
           </li>
         </ul>
       </div>
-      <div class="card-body"></div>
+      <div class="card-body overflow-auto">
+        <app-announcements></app-announcements>
+      </div>
     </div>
   </div>
   <div class="col-sm col-lg-12 col-xl-4 col-xxl-3">
-    <div class="card" style="height: 100%">
+    <div class="card">
       <div class="card-header">
         <h6>Help Center</h6>
       </div>
@@ -90,7 +97,7 @@
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row d-none d-md-flex">
   <div class="col=12">
     <div class="card">
       <app-orders></app-orders>
