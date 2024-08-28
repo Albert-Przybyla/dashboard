@@ -41,12 +41,17 @@
     </ul>
   </div>
   <div class="sidebar-bottom">
-    <a class="nav-link text-start">
-      <i class="bi bi-box-arrow-right"></i>
-      &nbsp;
-      <span>Log Out</span>
-    </a>
-    <div class="card page-footer mt-3">
+    <ul class="nav nav-pills flex-column">
+      <li class="nav-item">
+        <a class="nav-link text-start" routerLinkActive="active">
+          <i class="bi" [class]=""></i>
+          <img src="icons/log-out.svg" class="icon" alt="Icon" />
+          &nbsp;
+          <span>Log Out</span>
+        </a>
+      </li>
+    </ul>
+    <div class="card page-footer mt-1">
       <div class="d-flex p-2">
         <img
           src="img/image.png"

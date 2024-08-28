@@ -130,6 +130,11 @@ table {
   color: #fa5555;
 }
 
+.badge {
+  position: relative;
+  top: -3px;
+}
+
 .ci-settings {
   background: url("data:image/svg+xml;utf8,http://localhost:62698/icons/copy.svg");
   width: 16px;

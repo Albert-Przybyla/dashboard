@@ -1,13 +1,13 @@
 <div class="list-group">
   @if(loading){
-  <div class="list-group-item">
+  <div class="list-group-item" @fadeOut>
     <div class="d-flex w-100 justify-content-between mb-2">
       <div class="d-flex align-items-center">
         <span class="placeholder img-load me-3">&nbsp;</span>
         <div>
-          <h5 class="mb-1">
+          <h6 class="mb-1">
             <span class="placeholder p-2" style="width: 100px"></span>
-          </h5>
+          </h6>
           <small>
             <span class="placeholder p-0" style="width: 70px"></span
           ></small>
@@ -22,18 +22,18 @@
     </p>
   </div>
   } @else { @for(item of items; track item; let i = $index){
-  <div class="list-group-item">
+  <div class="list-group-item" @fadeIn>
     <div class="d-flex w-100 justify-content-between mb-2">
       <div class="d-flex align-items-center">
         <img [src]="item.icon" alt="Icon" class="icon-class me-3" />
         <div>
-          <h5 class="mb-1">{{ item.title }}</h5>
-          <small>{{ item.subTitle }}</small>
+          <h6 class="mb-1">{{ item.title }}</h6>
+          <small class="text-seconadry">{{ item.subTitle }}</small>
         </div>
       </div>
-      <small class="text-muted">14h ago</small>
+      <small class="text-seconadry">14h ago</small>
     </div>
-    <p class="mb-1">
+    <p class="mb-1 text-seconadry">
       {{ item.description }}
     </p>
   </div>

@@ -42,7 +42,7 @@ export class TmpDataService {
 
   private orders: Order[] = [
     {
-      id: 'Ap1234',
+      id: 'AP1234',
       product: 'Static proxies',
       date: new Date(),
       quantity: 4,
@@ -50,7 +50,7 @@ export class TmpDataService {
       Total: 33,
     },
     {
-      id: 'Ap1235',
+      id: 'AP1235',
       product: 'Residential proxies',
       date: new Date(),
       quantity: 4,
@@ -58,7 +58,7 @@ export class TmpDataService {
       Total: 33,
     },
     {
-      id: 'Ap1236',
+      id: 'AP1236',
       product: 'hybrid proxies',
       date: new Date(),
       quantity: 4,
@@ -66,7 +66,7 @@ export class TmpDataService {
       Total: 33,
     },
     {
-      id: 'Ap1237',
+      id: 'AP1237',
       product: 'hybrid proxies',
       date: new Date(),
       quantity: 4,
@@ -74,7 +74,7 @@ export class TmpDataService {
       Total: 33,
     },
     {
-      id: 'Ap1238',
+      id: 'AP1238',
       product: 'Static proxies',
       date: new Date(),
       quantity: 4,
@@ -82,7 +82,7 @@ export class TmpDataService {
       Total: 33,
     },
     {
-      id: 'Ap1234',
+      id: 'AP1234',
       product: 'Static proxies',
       date: new Date(),
       quantity: 4,
