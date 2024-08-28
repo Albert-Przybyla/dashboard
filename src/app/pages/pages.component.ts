@@ -9,4 +9,11 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './pages.component.html',
   styleUrl: './pages.component.scss',
 })
-export class PagesComponent {}
+export class PagesComponent {
+  toggleMenu() {
+    const sidebar = document.querySelector('.sidebar');
+    if (sidebar) {
+      sidebar.classList.toggle('active');
+    }
+  }
+}

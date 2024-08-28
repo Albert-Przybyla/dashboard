@@ -1,9 +1,20 @@
 <div class="card">
-  <div class="card-header d-flex justify-content-between sticky-sm-top">
+  <div class="card-header d-flex justify-content-between">
     <h5 class="mb-0 d-flex align-items-center">
-      <span class="text-seconadry">Dashboard</span> / Home
+      <button
+        class="btn btn-no-shadow d-md-none menu-btn"
+        (click)="toggleMenu()"
+      >
+        <div class="hamburger-icon">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </button>
+      <span class="text-seconadry d-none d-lg-inline">Dashboard</span>
+      <span class="d-none d-lg-inline">/</span> Home
     </h5>
-    <div>
+    <div class="d-flex justify-content-end">
       <button class="btn btn-no-shadow">
         <img src="icons/notifications.svg" class="icon" alt="Icon" />
       </button>
@@ -13,7 +24,7 @@
           78 | currency
         }}
       </button>
-      <button class="btn btn-secondary ms-2 text-seconadry">
+      <button class="btn btn-secondary ms-2 text-seconadry d-none d-md-inline">
         <img src="icons/settings.svg" class="icon me-2" alt="Icon" />Menage
         Billing
       </button>

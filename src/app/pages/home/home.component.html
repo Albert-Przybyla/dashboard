@@ -1,9 +1,11 @@
 <div class="row">
   <div class="col-12 col-lg-12 col-xl">
     <div class="card" style="height: 100%">
-      <div class="card-header d-flex justify-content-between">
-        <h6>Loyalty Status</h6>
-        <p>Restarting: <span class="heading-color">5:14:54:54</span></p>
+      <div class="card-header d-flex justify-content-between sm-flex-column">
+        <h6 class="sm-w-100">Loyalty Status</h6>
+        <p class="sm-w-100">
+          Restarting: <span class="heading-color">5:14:54:54</span>
+        </p>
       </div>
       <div class="card-body">
         <div class="loyalty-data">
@@ -35,7 +37,9 @@
             class="form-control"
             value="promocode25"
           />
-          <div class="input-group-text" (click)="copy()">Copy</div>
+          <div class="input-group-text btn btn-primary" (click)="copy()">
+            Copy
+          </div>
         </div>
       </div>
     </div>
@@ -79,7 +83,7 @@
           />Troubleshooting
         </button>
         <button class="btn btn-primary my-1 text-start">
-          <img src="icons/invoice.svg" class="icon me-2" alt="Icon" />Talk to
+          <img src="icons/support.svg" class="icon me-2" alt="Icon" />Talk to
           Support
         </button>
       </div>

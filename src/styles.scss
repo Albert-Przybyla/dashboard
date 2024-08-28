@@ -16,6 +16,23 @@ body {
 @media screen and (max-width: 768px) {
   .fixed-sm-top {
     position: fixed;
-    // z-index: $;
+    z-index: 1000;
+    background-color: var(--bs-body-bg);
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: all 0.2s ease-out;
+  }
+
+  .fixed-sm-top.active {
+    transform: translateX(0);
+    transition: all 0.4s ease-out;
+  }
+
+  .sm-w-100 {
+    width: 100% !important;
+  }
+
+  .sm-flex-column {
+    flex-direction: column;
   }
 }

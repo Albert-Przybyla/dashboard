@@ -11,4 +11,11 @@ import { Route, RouterModule } from '@angular/router';
 })
 export class SideMenuComponent {
   protected routes: Route[] = getRoutesForApp();
+
+  toggleMenu() {
+    const sidebar = document.querySelector('.sidebar');
+    if (sidebar) {
+      sidebar.classList.toggle('active');
+    }
+  }
 }
