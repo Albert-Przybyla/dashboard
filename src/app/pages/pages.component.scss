@@ -2,52 +2,15 @@
   background-color: transparent;
 }
 
-.btn-no-shadow {
-  box-shadow: none !important;
-}
-
-.btn-close {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.hamburger-icon {
-  width: 32px;
-  height: 22px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.bar {
-  width: 24px;
-  height: 2px;
-  background-color: white;
-  border-radius: 2px;
-}
-
-.menu-btn {
-  padding-left: 5px !important;
-  padding-right: 5px !important;
-  margin-right: 5px !important;
-}
-
 @media screen and (max-width: 768px) {
-  .card-header {
-    padding: 0px 0px 12px 0px !important;
-  }
-}
-
-@media screen and (min-width: 769px) {
   .card {
-    min-height: calc(100vh - 2rem);
-    border-color: #2b2c2e;
+    border: none !important;
   }
-
   .card-header {
-    padding: 12px 12px 12px 18px !important;
-    border-bottom: 1px solid #2b2c2e;
+    border: none !important;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    padding: 12px 0px 18px 0px;
   }
 }

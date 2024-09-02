@@ -18,6 +18,7 @@ $h3-font-size: 14px;
 $h4-font-size: 14px;
 $h5-font-size: 14px;
 $h6-font-size: 12px;
+$input-btn-font-size: 16px;
 
 // ERROR FIX
 $nav-link-padding-y: 0.5;
@@ -32,13 +33,21 @@ $headings-color: #fbfcfe;
 
 $primary: $orange;
 $primary-text-emphasis: $headings-color;
-$secondary: #272b30;
+$secondary: #262a30;
 $secondary-color: $body-color;
 
 $nav-pills-link-active-bg: $secondary;
 $nav-pills-link-active-color: $headings-color;
 $nav-link-color: $body-color;
 $nav-link-hover-color: $headings-color;
+
+$card-border-radius: 16px;
+$card-bg: #16171b;
+$card-cap-padding-y: 12px;
+$card-cap-padding-x: 12px;
+$card-cap-bg: transparent;
+$card-border-color: transparent;
+
 @font-face {
   font-family: "Inter";
   src: url("../public/font/Inter.ttf") format("truetype");
@@ -81,10 +90,23 @@ $nav-link-hover-color: $headings-color;
   color: $headings-color !important;
 }
 
+@media screen and (min-width: 768px) {
+  .md-text-body {
+    color: $body-color !important;
+  }
+
+  .md-text-heading {
+    color: $headings-color !important;
+  }
+}
 .bg-lighter {
   background-color: #16171b;
 }
 
 .bg-body {
   background-color: $body-bg !important;
+}
+
+.btn {
+  border-top: 1px solid #4a4d52;
 }
