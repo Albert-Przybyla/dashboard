@@ -1,49 +1,137 @@
-<app-data-displayer [loading]="loading" (pageChange)="getData($event)">
-  <tr header>
-    <th scope="col">ID</th>
-    <th scope="col">Product</th>
-    <th scope="col">Date</th>
-    <th scope="col">Quantity</th>
-    <th scope="col">Status</th>
-    <th scope="col">Total</th>
-    <th scope="col">Actions</th>
-  </tr>
-  <ng-container body>
-    @for(item of items; track item; let i = $index){
-    <tr>
-      <td>
-        <img src="icons/copy.svg" class="icon me-1" alt="Icon" />#{{ item.id }}
-      </td>
-      <td>{{ item.product }}</td>
-      <td>{{ item.date | date : "dd MMM yyyy" }}</td>
-      <td>{{ item.quantity }}GB</td>
-      <td>
-        <span
-          class="badge rounded-2 px-2 py-2 fs-4"
-          [ngClass]="getStatusColor(item.status)"
-        >
-          <svg
-            stroke="currentColor"
-            fill="currentColor"
-            stroke-width="0"
-            viewBox="0 0 24 24"
-            class="me-1"
-            height="1em"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z"></path>
-          </svg>
-          {{ stauses[item.status] }}</span
-        >
-      </td>
-      <td>{{ item.Total | currency }}</td>
-      <td>
-        <span>
-          <button class="btn btn-outline-secondary">Download Invoice</button>
-        </span>
-      </td>
+<div class="card-header d-md-none">
+  <h3 class="m-0 position-relative">
+    Your Orders
+    <img src="icons/order-filter.svg" class="order-icon" alt="Icon" />
+  </h3>
+</div>
+<div class="card-body">
+  <app-data-displayer
+    [loading]="loading"
+    (pageChange)="getData($event)"
+    class="d-none d-md-block"
+  >
+    <tr header>
+      <th scope="col">ID</th>
+      <th scope="col">Product</th>
+      <th scope="col">Date</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Status</th>
+      <th scope="col">Total</th>
+      <th scope="col">Actions</th>
     </tr>
-    }
-  </ng-container>
-</app-data-displayer>
+    <ng-container body>
+      @for(item of items; track item; let i = $index){
+      <tr>
+        <td>
+          <img src="icons/copy.svg" class="icon me-1" alt="Icon" />#{{
+            item.id
+          }}
+        </td>
+        <td>{{ item.product }}</td>
+        <td>{{ item.date | date : "dd MMM yyyy" }}</td>
+        <td>{{ item.quantity }}GB</td>
+        <td>
+          <span
+            class="badge rounded-2 px-2 py-2 fs-4"
+            [ngClass]="getStatusColor(item.status)"
+          >
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              class="me-1"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z"></path>
+            </svg>
+            {{ stauses[item.status] }}</span
+          >
+        </td>
+        <td>{{ item.Total | currency }}</td>
+        <td>
+          <span>
+            <button class="btn btn-outline-secondary">Download Invoice</button>
+          </span>
+        </td>
+      </tr>
+      }
+    </ng-container>
+  </app-data-displayer>
+  <table class="table d-md-none">
+    <tbody>
+      @for(item of items; track item; let i = $index){
+      <tr class="card border border-dark">
+        <td
+          class="card-header d-flex justify-content-between align-items-center border-bottom border-dark"
+        >
+          <div class="d-flex justify-content-between align-items-center">
+            <div
+              class="product-item border border-dark d-flex justify-content-center align-items-center"
+            >
+              <img src="icons/product.svg" />
+            </div>
+            <div class="">
+              <h3 class="mb-1">{{ item.product }}</h3>
+              <span class="text-body">{{
+                item.date | date : "dd MMM yyyy"
+              }}</span>
+            </div>
+          </div>
+          <div>
+            <span
+              class="badge rounded-2 px-2 py-2 fs-4"
+              [ngClass]="getStatusColor(item.status)"
+            >
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                class="me-1"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z"></path>
+              </svg>
+              {{ stauses[item.status] }}</span
+            >
+          </div>
+        </td>
+        <td
+          class="card-body border-bottom border-dark d-flex justify-content-between align-items-center"
+        >
+          <h3>ID</h3>
+          <p class="m-0">
+            <img src="icons/copy.svg" class="icon me-1" alt="Icon" />#{{
+              item.id
+            }}
+          </p>
+        </td>
+        <td
+          class="card-body border-bottom border-dark d-flex justify-content-between align-items-center"
+        >
+          <h3>Quantity</h3>
+          <p class="m-0">{{ item.quantity }}GB</p>
+        </td>
+        <td
+          class="card-body border-bottom border-dark d-flex justify-content-between align-items-center"
+        >
+          <h3>Total</h3>
+          <p class="m-0">
+            {{ item.Total | currency }}
+          </p>
+        </td>
+        <td
+          class="card-body border-bottom border-dark d-flex justify-content-between align-items-center"
+        >
+          <button class="btn btn-secondary w-100">Download Invoice</button>
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>

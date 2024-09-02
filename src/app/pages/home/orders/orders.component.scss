@@ -30,3 +30,31 @@
   background-color: #2c2c21;
   color: #f5e65a;
 }
+
+/////////
+
+.order-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.product-item {
+  border-radius: 6px;
+  margin-right: 18px;
+  padding: 11px;
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+tr.card {
+  td.card-header {
+    padding: 15px 15px;
+  }
+  td {
+    padding: 10px 15px;
+  }
+  margin-bottom: 16px;
+}
