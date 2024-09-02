@@ -13,5 +13,20 @@
 }
 
 .badge {
-  padding: 8px;
+  padding: 6px 8px;
+}
+
+.badge-next {
+  background-color: #252d21 !important;
+  color: #b1f55a !important;
+}
+
+.badge-danger {
+  background-color: #2d1d21;
+  color: #fa5555;
+}
+
+.badge-warning {
+  background-color: #2c2c21;
+  color: #f5e65a;
 }

@@ -18,8 +18,23 @@
       <td>{{ item.date | date : "dd MMM yyyy" }}</td>
       <td>{{ item.quantity }}GB</td>
       <td>
-        <span class="badge" [ngClass]="getStatusColor(item.status)">
-          <span class="dot me-2 ms-1"></span>{{ stauses[item.status] }}</span
+        <span
+          class="badge rounded-2 px-2 py-2 fs-4"
+          [ngClass]="getStatusColor(item.status)"
+        >
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            class="me-1"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z"></path>
+          </svg>
+          {{ stauses[item.status] }}</span
         >
       </td>
       <td>{{ item.Total | currency }}</td>
