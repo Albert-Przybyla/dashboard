@@ -1,43 +1,53 @@
-<div class="list-group">
-  @if(loading){
-  <div class="list-group-item p-0 m-0 mb-4 pb-2 underline" @fadeOut>
-    <div
-      class="d-flex w-100 justify-content-between align-items-center mb-2 p-1"
-    >
-      <div class="d-flex align-items-center">
-        <span class="placeholder img-load me-3">&nbsp;</span>
-        <div>
-          <h6 class="mb-0">
-            <span class="placeholder p-2" style="width: 100px"></span>
-          </h6>
-          <small>
-            <span class="placeholder p-0" style="width: 70px"></span
-          ></small>
+<div class="card-header mb-3">
+  <h3 class="mb-3 pb-1">Announcements</h3>
+  <ul class="nav nav-underline underline border-bottom border-dark">
+    <li class="nav-item me-3 h-100">
+      <a class="nav-link active"
+        >General<span
+          class="bg-dark4 fs-6 text-light2 fw-normal mb-1 ms-2 badge1 badge badge-secondary text-heading"
+          >3</span
+        >
+      </a>
+    </li>
+    <li class="nav-item me-3">
+      <a class="nav-link h-100">Status</a>
+    </li>
+    <li class="nav-item me-3">
+      <a class="nav-link h-100">Promotions</a>
+    </li>
+  </ul>
+</div>
+<div class="card-body overflow-auto">
+  <div class="list-group" [class.list-expanded]="readmore">
+    @if(loading){ } @else { @for(item of items; track item; let i = $index){
+    <div class="border-bottom border-dark line-element">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="d-flex align-items-center">
+          <img [src]="item.icon" alt="Image" height="35" class="" />
+          <div class="ms-2">
+            <h3 class="mb-1">{{ item.title }}</h3>
+            <h5 class="text-body mb-0">{{ item.subTitle }}</h5>
+          </div>
         </div>
+        <h5 class="text-body mb-0">14h ago</h5>
       </div>
-      <small class="text-seconadry py-2">
-        <span class="placeholder" style="width: 40px"></span>
-      </small>
-    </div>
-    <p class="mb-1">
-      <span class="placeholder col-9 m-1 p-1">&nbsp;</span>
-    </p>
-  </div>
-  } @else { @for(item of items; track item; let i = $index){
-  <div class="list-group-item p-0 m-0 mb-4 pb-2 underline" @fadeIn>
-    <div class="d-flex w-100 justify-content-between align-items-center mb-2">
-      <div class="d-flex align-items-center">
-        <img [src]="item.icon" alt="Icon" class="icon-class me-3" />
-        <div>
-          <h6 class="mb-0">{{ item.title }}</h6>
-          <small class="text-seconadry">{{ item.subTitle }}</small>
-        </div>
+      <div class="">
+        <h5 class="text-body">
+          {{ item.description }}
+        </h5>
       </div>
-      <small class="text-seconadry">14h ago</small>
     </div>
-    <p class="mb-1 text-seconadry py-2">
-      {{ item.description }}
-    </p>
+    } }
   </div>
-  } }
+  <div
+    class="readmore text-body d-xl-none"
+    [class.readmore-expanded]="readmore"
+    (click)="readmore = !readmore"
+  >
+    Read More<img
+      src="icons/arrow.svg"
+      class="readmore-arrow icon ms-2"
+      alt="Icon"
+    />
+  </div>
 </div>

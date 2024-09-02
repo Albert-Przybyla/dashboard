@@ -1,117 +1,21 @@
-<div @fadeIn>
-  <div class="row">
-    <div class="col-12 col-lg-12 col-xl">
+<div @fadeIn class="page-container">
+  <div class="row d-flex align-items-stretch">
+    <div class="col-100 col-xl-38">
       <div class="card">
-        <div class="card-header d-flex justify-content-between sm-flex-column">
-          <h6 class="sm-w-100">
-            Loyalty Status
-            <img src="icons/info.svg" class="icon icon-sm me-1" alt="Icon" />
-          </h6>
-          <p class="sm-w-100">
-            <span class="text-seconadry">Restarting: </span>
-            <span class="heading-color">5:14:54:54</span>
-          </p>
-        </div>
-        <div class="card-body">
-          <div class="loyalty-data mt-2 mb-1">
-            <div class="pointer">
-              <div class="label">
-                <p class="mb-1 text-seconadry">Monthly&nbsp;Spent</p>
-                <h5>
-                  {{ 233 | currency }}
-                  <span class="badge badge-status ms-2">Silver</span>
-                </h5>
-              </div>
-            </div>
-
-            <div class="pointer" [style]="{ left: '70%' }">
-              <div class="label">
-                <p class="mb-1 text-seconadry">
-                  Gold
-                  <img
-                    src="icons/info.svg"
-                    class="icon icon-sm me-1"
-                    alt="Icon"
-                  />
-                </p>
-                <h5>
-                  {{ 275 | currency }}
-                </h5>
-              </div>
-            </div>
-          </div>
-          <app-progress-bar
-            [progress]="65"
-            style="z-index: 2"
-          ></app-progress-bar>
-          <div class="input-group my-2 mt-5">
-            <input
-              #input
-              disabled="true"
-              type="text"
-              class="form-control"
-              value="promocode25"
-            />
-            <div class="input-group-text btn btn-primary" (click)="copy()">
-              Copy
-            </div>
-          </div>
-        </div>
+        <app-loyalty></app-loyalty>
       </div>
     </div>
-    <div class="col-12 col-lg-12 col-xl">
+    <div class="col-100 col-xl-40">
       <div class="card">
-        <div class="card-header mb-4">
-          <h6>Announcements</h6>
-          <ul class="nav nav-underline underline">
-            <li class="nav-item me-3">
-              <a class="nav-link active"
-                >General<span class="badge badge-notification ms-3">3</span>
-              </a>
-            </li>
-            <li class="nav-item me-3">
-              <a class="nav-link">Status</a>
-            </li>
-            <li class="nav-item me-3">
-              <a class="nav-link">Promotions</a>
-            </li>
-          </ul>
-        </div>
-        <div class="card-body overflow-auto">
-          <app-announcements></app-announcements>
-        </div>
+        <app-announcements></app-announcements>
       </div>
     </div>
-    <div class="col-sm col-lg-12 col-xl-4 col-xxl-3">
+    <div class="col-100 col-xl-22">
       <div class="card">
-        <div class="card-header">
-          <h6>Help Center</h6>
-        </div>
-        <div class="card-body d-flex flex-column">
-          <button class="btn btn-secondary my-1 text-start text-seconadry">
-            <img src="icons/invoice.svg" class="icon me-2" alt="Icon" />Insert
-            VAT
-          </button>
-          <button class="btn btn-secondary my-1 text-start text-seconadry">
-            <img src="icons/fag.svg" class="icon me-2" alt="Icon" />FAQ
-          </button>
-          <button class="btn btn-secondary my-1 text-start text-seconadry">
-            <img
-              src="icons/settings.svg"
-              class="icon me-2"
-              alt="Icon"
-            />Troubleshooting
-          </button>
-          <button class="btn btn-primary my-1 text-start">
-            <img src="icons/support.svg" class="icon me-2" alt="Icon" />Talk to
-            Support
-          </button>
-        </div>
+        <app-help></app-help>
       </div>
     </div>
-  </div>
-  <div class="row d-none d-md-flex">
-    <div class="col=12">
+    <div class="col-100 orders">
       <div class="card">
         <app-orders></app-orders>
       </div>

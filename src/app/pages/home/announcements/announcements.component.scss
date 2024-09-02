@@ -1,7 +1,52 @@
-img,
-.img-load {
-  width: 40px;
-  height: 40px;
-  position: relative;
-  top: -2px;
+a {
+  padding-bottom: 8px;
+}
+
+.card-body {
+  .list-group {
+    overflow: scroll;
+    max-height: 160px;
+    .line-element {
+      padding-bottom: 16px;
+      margin-bottom: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .list-group {
+    overflow: hidden;
+    max-height: 140px;
+    transition: all 0.3s ease;
+    .line-element {
+      display: none;
+    }
+    .line-element:first-child {
+      display: block;
+    }
+  }
+
+  .list-expanded {
+    transition: all 0.3s ease;
+    overflow: visible !important;
+    max-height: 600px !important;
+    height: unset !important;
+    .line-element {
+      display: block;
+    }
+  }
+}
+
+.readmore {
+  cursor: pointer;
+}
+
+.readmore-arrow {
+  transition: all 0.3s ease;
+}
+
+.readmore-expanded {
+  .readmore-arrow {
+    transform: rotate(-180deg);
+  }
 }

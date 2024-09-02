@@ -18,11 +18,16 @@ $h3-font-size: 14px;
 $h4-font-size: 14px;
 $h5-font-size: 14px;
 $h6-font-size: 12px;
-$input-btn-font-size: 16px;
+
+$input-btn-font-size: $h2-font-size;
+$input-btn-padding-y: 6px;
+$input-btn-padding-x: 12px;
 
 // ERROR FIX
 $nav-link-padding-y: 0.5;
 // ERROR FIX
+
+$border-color: #232428;
 
 // $enable-gradients: true;
 $enable-shadows: true;
@@ -36,6 +41,16 @@ $primary-text-emphasis: $headings-color;
 $secondary: #262a30;
 $secondary-color: $body-color;
 
+$input-border-radius: 6px;
+
+$input-bg: #16171b;
+$input-color: $body-color;
+$input-border-color: #2b2c2e;
+
+$input-disabled-bg: $input-bg;
+$input-disabled-color: $input-color;
+$input-disabled-border-color: $input-border-color;
+
 $nav-pills-link-active-bg: $secondary;
 $nav-pills-link-active-color: $headings-color;
 $nav-link-color: $body-color;
@@ -43,10 +58,27 @@ $nav-link-hover-color: $headings-color;
 
 $card-border-radius: 16px;
 $card-bg: #16171b;
-$card-cap-padding-y: 12px;
-$card-cap-padding-x: 12px;
+$card-cap-padding-y: 16px;
+$card-cap-padding-x: 16px;
+$card-spacer-y: 4px;
+$card-spacer-x: 16px;
 $card-cap-bg: transparent;
 $card-border-color: transparent;
+
+$badge-padding-y: 4px;
+$badge-padding-x: 6px;
+$badge-border-radius: 6px;
+$badge-font-size: 12px;
+
+$grid-gutter-width: 12px;
+
+$grid-columns: 100;
+
+$table-bg: transparent;
+$table-color: $body-color;
+$table-cell-padding-y: 0.75rem;
+$table-cell-vertical-align: center;
+$table-border-color: #232428;
 
 @font-face {
   font-family: "Inter";
@@ -79,7 +111,22 @@ $card-border-color: transparent;
 // }
 
 * {
-  font-weight: 400 !important;
+  font-weight: 300 !important;
+  scrollbar-width: none;
+}
+
+body {
+  letter-spacing: 0.5px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 1px;
 }
 
 .text-body {
@@ -90,12 +137,12 @@ $card-border-color: transparent;
   color: $headings-color !important;
 }
 
-@media screen and (min-width: 768px) {
-  .md-text-body {
+@media screen and (min-width: 1200px) {
+  .xl-text-body {
     color: $body-color !important;
   }
 
-  .md-text-heading {
+  .xl-text-heading {
     color: $headings-color !important;
   }
 }
@@ -109,4 +156,32 @@ $card-border-color: transparent;
 
 .btn {
   border-top: 1px solid #4a4d52;
+}
+
+.btn-primary {
+  color: $headings-color;
+  &:hover {
+    color: $headings-color;
+  }
+}
+
+.btn-secondary {
+  color: $body-color;
+}
+
+.info-icon {
+  position: relative;
+  top: -2px;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+
+.badge-secondary {
+  color: #c0c0c0;
+  background-color: #2f3034;
+}
+
+.card-body {
+  padding-bottom: 16px;
 }

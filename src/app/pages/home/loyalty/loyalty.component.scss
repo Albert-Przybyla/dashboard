@@ -1,0 +1,31 @@
+.loyalty-data {
+  height: 60px;
+}
+.line-element {
+  position: relative;
+  height: 60px;
+  padding: 1px 0px 8px 10px;
+
+  .text-body {
+    margin-bottom: 4px;
+  }
+}
+.pointer {
+  position: absolute;
+  left: 1px;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #2a2c35;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: #2a2c35;
+    border-radius: 50%;
+    z-index: 2;
+  }
+}

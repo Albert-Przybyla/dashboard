@@ -1,0 +1,50 @@
+<div class="card-header d-flex justify-content-between sm-flex-column">
+  <h3 class="m-0 sm-w-100">
+    Loyalty Status
+    <img src="icons/info.svg" class="info-icon mx-1" alt="Info" />
+  </h3>
+  <p class="sm-w-100">
+    <span class="text-body">Restarting: </span>
+    <span class="heading-color">5:14:54:54</span>
+  </p>
+</div>
+<div class="card-body">
+  <div class="d-flex justify-content-between">
+    <div class="line-element">
+      <div class="pointer"></div>
+      <div class="label">
+        <p class="text-body">Monthly&nbsp;Spent</p>
+        <h1>
+          {{ 233 | currency }}
+          <span
+            class="bg-dark4 fs-6 text-light2 fw-normal ms-1 mb-1 badge1 badge badge-secondary"
+            >Silver</span
+          >
+        </h1>
+      </div>
+    </div>
+    <div class="line-element me-4">
+      <div class="pointer"></div>
+      <div class="label">
+        <p class="text-body">
+          Gold
+          <img src="icons/info.svg" class="info-icon mx-1" alt="Info" />
+        </p>
+        <h1>
+          {{ 275 | currency }}
+        </h1>
+      </div>
+    </div>
+  </div>
+  <app-progress-bar [progress]="70" style="z-index: 2"></app-progress-bar>
+  <div class="input-group mt-3 pt-4">
+    <input
+      #input
+      disabled="true"
+      type="text"
+      class="form-control"
+      value="promocode25"
+    />
+    <div class="input-group-text btn btn-primary" (click)="copy()">Copy</div>
+  </div>
+</div>

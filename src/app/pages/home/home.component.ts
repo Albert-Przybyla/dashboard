@@ -4,20 +4,21 @@ import { ProgressBarComponent } from '../../components/progress-bar/progress-bar
 import { CurrencyPipe } from '@angular/common';
 import { AnnouncementsComponent } from './announcements/announcements.component';
 import { baseAnimations } from '../../base/baseAnimations';
+import { HelpComponent } from './help/help.component';
+import { LoyaltyComponent } from './loyalty/loyalty.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
     OrdersComponent,
-    ProgressBarComponent,
     CurrencyPipe,
     AnnouncementsComponent,
+    HelpComponent,
+    LoyaltyComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   animations: [baseAnimations],
 })
-export class HomeComponent {
-  protected copy() {}
-}
+export class HomeComponent {}

@@ -37,6 +37,8 @@ import {
 export class AnnouncementsComponent extends BaseDataComponent<Announcement> {
   private _tmpDataService = inject(TmpDataService);
 
+  protected readmore: boolean = false;
+
   protected getValues(page: number): Observable<any> {
     return this._tmpDataService.getAnnouncements(page);
   }

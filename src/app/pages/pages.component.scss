@@ -1,16 +1,22 @@
 .card {
   background-color: transparent;
+
+  .card-header,
+  .card-body {
+    padding: 12px;
+  }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1199px) {
   .card {
     border: none !important;
-  }
-  .card-header {
-    border: none !important;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    padding: 12px 0px 18px 0px;
+
+    .card-header {
+      border: none !important;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      border-bottom: 1px solid #4a4d52 !important;
+    }
   }
 }

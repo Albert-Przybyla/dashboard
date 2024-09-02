@@ -1,63 +1,18 @@
-.row > * {
-  padding-bottom: calc(var(--bs-gutter-x) * 0.5);
-  padding-right: calc(var(--bs-gutter-x) * 0.25) !important;
-  padding-left: calc(var(--bs-gutter-x) * 0.25) !important;
+.col-100 {
+  padding-bottom: 12px;
 }
-
-.heading-color {
-  color: var(--bs-heading-color);
-}
-
-.loyalty-data {
-  width: 100%;
-  height: 70px;
-  position: relative;
-}
-
-.pointer {
-  position: absolute;
-  left: 1px;
-  top: 0;
-  width: 1px;
-  height: 100%;
-  background-color: #2a2c35;
-
-  .label {
-    position: absolute;
-    left: 10px;
-    top: 0px;
-    height: 100%;
-    white-space: nowrap;
-  }
-}
-
-.pointer::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 8px;
-  height: 8px;
-  background-color: #2a2c35;
-  border-radius: 50%;
-  z-index: 2;
-}
-
 @media screen and (min-width: 1200px) {
-  .row:first-child {
-    .card {
-      min-height: 100%;
-      height: 340px;
+  .row {
+    .col-100 {
+      height: 292px;
+
+      .card {
+        height: 100%;
+        overflow: hidden;
+      }
+    }
+    .orders {
+      height: unset !important;
     }
   }
-}
-
-.badge-status {
-  background-color: #4b4b4e;
-  color: #c0c0c0;
-}
-
-.badge-notification {
-  background-color: #4b4b4e;
-  color: #fbfcfe;
 }
