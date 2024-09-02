@@ -1,13 +1,6 @@
-<div class="container-fluid" data-bs-theme="dark">
-  <div class="row">
-    <div
-      class="col-md-4 col-lg-4 col-xl-3 col-xxl-2 d-md-block sidebar fixed-sm-top md-position-fixed"
-    >
-      <app-side-menu></app-side-menu>
-    </div>
-    <div class="col-md-4 col-lg-4 col-xl-3 col-xxl-2"></div>
-    <main class="col-md-8 ml-sm-auto col-lg-8 col-xl-9 col-xxl-10 pt-3">
-      <router-outlet></router-outlet>
-    </main>
-  </div>
+<div class="app-container vh-100" data-bs-theme="dark">
+  <app-side-menu></app-side-menu>
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
 </div>

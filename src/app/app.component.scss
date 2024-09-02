@@ -1,0 +1,28 @@
+.app-container {
+  display: flex;
+}
+
+.sidebar {
+  transition: transform 0.3s ease;
+  background-color: var(--bs-body-bg);
+}
+
+.main-content {
+  flex-grow: 1;
+  overflow-y: scroll;
+}
+
+@media screen and (max-width: 767px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    z-index: 10000;
+    transition: transform 0.3s ease;
+  }
+}
+
+.active {
+  transform: translateX(0);
+}

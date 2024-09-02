@@ -1,37 +1,31 @@
-<nav class="side-bar">
-  <div>
-    <div
-      class="d-flex align-items-center py-3 px-1 mb-2 nav-top-underline underline"
-    >
-      <img
-        src="img/logo.png"
-        alt="Lemonclub Logo"
-        class="img-fluid"
-        style="width: 40px; height: 40px"
-      />
-      <div class="ms-3 page-header w-100">
-        <h5 class="mb-0">Lemonclub</h5>
-        <small>Premium Proxy Solutions</small>
+<nav class="bg-body sidebar">
+  <div class="nav-inner nav-inner-top">
+    <div class="logo-container">
+      <div class="logo">
+        <img src="icons/logo.svg" alt="Logo" />
+      </div>
+      <div class="title">
+        <h2 style="margin-bottom: 2px">Lemonclub</h2>
+        <h6 class="text-body">Premium Proxy Solutions</h6>
         <button
+          class="btn btn-transparent menu-close"
           type="button"
-          class="btn-close btn-close-white d-md-none"
           aria-label="Close"
           (click)="toggleMenu()"
-        ></button>
+        >
+          <img src="icons/close.svg" />
+        </button>
       </div>
     </div>
-    <p class="py-2 px-1 m-0">
-      <small> Main menu </small>
-    </p>
-    <ul class="nav nav-pills flex-column">
+    <h6 class="text-body" style="margin-bottom: 9px">Main menu</h6>
+    <ul class="nav nav-pills flex-column" style="margin-bottom: 16px">
       @for(route of routes; track route){
       <li class="nav-item">
         <a
-          class="nav-link text-start"
+          class="nav-link text-start fs-2"
           [routerLink]="['pages', route.path]"
           routerLinkActive="active"
         >
-          <i class="bi" [class]=""></i>
           <img [src]="route.data!['icon']" class="icon" alt="Icon" />
           &nbsp;
           <span>{{ route.data!["label"] }}</span>
@@ -39,30 +33,36 @@
       </li>
       }
     </ul>
-  </div>
-  <div class="sidebar-bottom">
-    <ul class="nav nav-pills flex-column">
+    <ul
+      class="nav nav-pills flex-column d-md-none mobile-menu"
+      style="margin-top: 16px"
+    >
       <li class="nav-item">
-        <a class="nav-link text-start" routerLinkActive="active">
-          <i class="bi" [class]=""></i>
+        <a class="nav-link text-start fs-2">
+          <img src="icons/settings.svg" class="icon" alt="Icon" />
+          &nbsp;
+          <span>Manage Billing</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="nav-inner nav-inner-bottom">
+    <ul class="nav nav-pills flex-column" style="margin-bottom: 3px">
+      <li class="nav-item">
+        <a class="nav-link text-start fs-2">
           <img src="icons/log-out.svg" class="icon" alt="Icon" />
           &nbsp;
           <span>Log Out</span>
         </a>
       </li>
     </ul>
-    <div class="card page-footer mt-1">
-      <div class="d-flex p-2">
-        <img
-          src="img/image.png"
-          alt="User Image"
-          class="me-2"
-          style="width: 40px; height: 40px"
-        />
-        <div>
-          <b>Vasco Ferreira</b><br />
-          <small class="text-muted">vascoferreira&#64;nr19.studio</small>
-        </div>
+    <div
+      class="account-card bg-dark2 d-flex border border-dark rounded-2 bg-lighter"
+    >
+      <img src="/img/image.png" alt="Globe Icon" height="40" class="me-2" />
+      <div>
+        <h3 style="margin-bottom: 3px">Vasco Ferreira</h3>
+        <h6 class="text-body m-0">vascoferreira&#64;nr19.studio</h6>
       </div>
     </div>
   </div>

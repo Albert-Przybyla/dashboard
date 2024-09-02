@@ -1,5 +1,44 @@
 @import "../node_modules/bootstrap/scss/functions";
 
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #d63384;
+$red: #dc3545;
+$orange: #ef5d39;
+$yellow: #ffc107;
+$green: #198754;
+$teal: #20c997;
+$cyan: #0dcaf0;
+
+$font-size-base: 14px;
+$small-font-size: 12px;
+$h1-font-size: 18px;
+$h2-font-size: 16px;
+$h3-font-size: 14px;
+$h4-font-size: 14px;
+$h5-font-size: 14px;
+$h6-font-size: 12px;
+
+// ERROR FIX
+$nav-link-padding-y: 0.5;
+// ERROR FIX
+
+// $enable-gradients: true;
+$enable-shadows: true;
+
+$body-bg: #111214;
+$body-color: #7e7f83;
+$headings-color: #fbfcfe;
+
+$primary: $orange;
+$primary-text-emphasis: $headings-color;
+$secondary: #272b30;
+$secondary-color: $body-color;
+
+$nav-pills-link-active-bg: $secondary;
+$nav-pills-link-active-color: $headings-color;
+$nav-link-color: $body-color;
+$nav-link-hover-color: $headings-color;
 @font-face {
   font-family: "Inter";
   src: url("../public/font/Inter.ttf") format("truetype");
@@ -9,72 +48,6 @@
   font-family: "icon";
   src: url("../public/font/icons.ttf") format("truetype");
 }
-
-$body-bg: #0e0f10;
-$text-color: #fbfcfe;
-$body-color: #7e7f83;
-$headings-color: $text-color;
-
-// $muted-color: #a1a1a1;
-// $info-color: #ffdd56;
-// $success-color: #35d075;
-// $danger-color: #ff5353;
-
-$indigo: #6610f2;
-$purple: #6f42c1;
-$pink: #d63384;
-$red: #dc3545;
-$orange: #fd7e14;
-$yellow: #ffc107;
-$green: #198754;
-$teal: #20c997;
-$cyan: #0dcaf0;
-
-$primary: #ff6c37;
-$primary-color: $text-color;
-$secondary: #272b30;
-$secondary-color: #272b30;
-
-$link-color: $body-color;
-
-$card-border-radius: 16px;
-
-$nav-pills-link-active-bg: $secondary;
-$nav-pills-link-active-color: $text-color;
-
-$link-color-dark: $body-color;
-
-$table-bg: transparent;
-$table-color: $body-color;
-$table-cell-padding-y: 0.75rem;
-$table-cell-vertical-align: center;
-$table-border-color: #232428;
-
-$font-family-sans-serif: Inter;
-$font-size-base: 1.0625rem;
-$headings-font-weight: 400;
-$card-bg: #16171b;
-$card-cap-padding-y: 8px;
-$card-cap-padding-x: 16px;
-$card-cap-bg: transparent;
-$card-border-color: transparent;
-
-$input-disabled-color: #7e7f83;
-$input-disabled-bg: #151518;
-$input-border-color: #2b2c2e;
-$input-border-radius: 6px;
-$input-border-radius-sm: 6px;
-$input-border-radius-lg: 6px;
-$input-padding-y: 8px;
-$input-padding-x: 10px;
-
-$input-btn-padding-y: 10px;
-$input-btn-padding-x: 10px;
-
-$nav-underline-link-active-color: $text-color;
-
-$list-group-bg: transparent;
-$list-group-border-color: transparent;
 
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
@@ -86,119 +59,32 @@ $list-group-border-color: transparent;
 @import "../node_modules/bootstrap/scss/root";
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+.btn-transparent {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+// img {
+//   filter: white !important;
+// }
+
 * {
   font-weight: 400 !important;
 }
 
-th {
-  color: $text-color !important;
-  border: none !important;
+.text-body {
+  color: $body-color !important;
 }
 
-table {
-  margin: 0 !important;
+.text-heading {
+  color: $headings-color !important;
 }
 
-.sticky-top {
-  background-color: $body-bg;
+.bg-lighter {
+  background-color: #16171b;
 }
 
-.nav-underline .nav-link.active {
-  position: relative;
-  top: 2px;
-  border-width: 1px !important;
-}
-
-.underline {
-  border-left: none;
-  border-top: none;
-  border-right: none;
-  border-bottom: 0.025rem solid #232428 !important;
-  border-color: #232428 !important;
-}
-
-.btn > i {
-  font-size: 1.2rem;
-}
-
-.badge-secondary {
-  background-color: $body-color;
-}
-
-.badge-next {
-  background: #2b3324;
-  color: #b1f55a;
-}
-
-.badge-warning {
-  background: #363627;
-  color: #f5e65a;
-}
-
-.badge-danger {
-  background: #41292f;
-  color: #fa5555;
-}
-
-.badge {
-  position: relative;
-  top: -3px;
-}
-
-.ci-settings {
-  background: url("data:image/svg+xml;utf8,http://localhost:62698/icons/copy.svg");
-  width: 16px;
-  height: 16px;
-}
-
-.text-seconadry {
-  color: #7e7f83 !important;
-}
-
-tr:last-child {
-  td {
-    border-bottom: none !important;
-  }
-}
-
-td:last-child {
-  width: 200px;
-}
-
-.btn {
-  box-shadow: 0px 1px 1px 0px #ffffff33 inset;
-}
-
-.btn-primary {
-  color: $text-color;
-}
-
-.card {
-  .card-header {
-    padding-top: 16px;
-  }
-
-  .card-body {
-    padding: 8px 16px 16px 16px;
-  }
-}
-
-.test {
-  font-family: icon;
-}
-.icon {
-  position: relative;
-  top: -1px;
-  width: 22px;
-  height: 22px;
-  fill: currentColor;
-}
-
-.icon-sm {
-  width: 18px;
-  height: 18px;
-}
-
-.input-group-text {
-  padding: 8px 12px;
+.bg-body {
+  background-color: $body-bg !important;
 }
