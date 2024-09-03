@@ -17,7 +17,9 @@
       <th scope="col">Quantity</th>
       <th scope="col">Status</th>
       <th scope="col">Total</th>
-      <th scope="col">Actions</th>
+      <th scope="col" class="text-end">
+        <span> Actions </span>
+      </th>
     </tr>
     <ng-container body>
       @for(item of items; track item; let i = $index){
@@ -51,10 +53,8 @@
           >
         </td>
         <td>{{ item.Total | currency }}</td>
-        <td>
-          <span>
-            <button class="btn btn-outline-secondary">Download Invoice</button>
-          </span>
+        <td style="max-width: 108px" class="text-end">
+          <div class="btn btn-outline-secondary">Download Invoice</div>
         </td>
       </tr>
       }
@@ -62,7 +62,59 @@
   </app-data-displayer>
   <table class="table d-md-none">
     <tbody>
-      @for(item of items; track item; let i = $index){
+      @if(loading){
+      <tr class="card border border-dark">
+        <td
+          class="card-header d-flex justify-content-between align-items-center border-bottom border-dark"
+        >
+          <div class="d-flex justify-content-between align-items-center">
+            <div
+              class="product-item border border-dark d-flex justify-content-center align-items-center"
+            >
+              <img src="icons/product.svg" />
+            </div>
+            <div class="placeholder-glow">
+              <h3 class="mb-1 placeholder-glow">
+                <span class="placeholder" style="width: 70px"></span>
+              </h3>
+              <span class="text-body placeholder-glow">
+                <span class="placeholder" style="width: 60px"></span
+              ></span>
+            </div>
+          </div>
+          <div>
+            <span class="badge rounded-2 px-2 py-2 fs-4 placeholder-glow">
+              <span class="placeholder" style="width: 70px"></span
+            ></span>
+          </div>
+        </td>
+        <td
+          class="card-body border-bottom border-dark d-flex justify-content-between align-items-center placeholder-glow"
+        >
+          <h3><span class="placeholder" style="width: 20px"></span></h3>
+          <p class="m-0 placeholder-glow">
+            <span class="placeholder" style="width: 70px"></span>
+          </p>
+        </td>
+        <td
+          class="card-body border-bottom border-dark d-flex justify-content-between align-items-center placeholder-glow"
+        >
+          <h3><span class="placeholder" style="width: 20px"></span></h3>
+          <p class="m-0 placeholder-glow">
+            <span class="placeholder" style="width: 70px"></span>
+          </p>
+        </td>
+        <td
+          class="card-body border-bottom border-dark d-flex justify-content-between align-items-center placeholder-glow"
+        >
+          <h3><span class="placeholder" style="width: 20px"></span></h3>
+          <p class="m-0 placeholder-glow">
+            <span class="placeholder" style="width: 70px"></span>
+          </p>
+        </td>
+      </tr>
+
+      }@else { @for(item of items; track item; let i = $index){
       <tr class="card border border-dark">
         <td
           class="card-header d-flex justify-content-between align-items-center border-bottom border-dark"
@@ -131,7 +183,7 @@
           <button class="btn btn-secondary w-100">Download Invoice</button>
         </td>
       </tr>
-      }
+      } }
     </tbody>
   </table>
 </div>

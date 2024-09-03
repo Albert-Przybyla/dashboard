@@ -6,6 +6,14 @@ import { CommonModule, DatePipe } from '@angular/common';
 import { BaseDataComponent } from '../../../base/baseDataComponent';
 import { Observable } from 'rxjs';
 import { status } from '../../../enums/status.enum';
+import {
+  trigger,
+  transition,
+  query,
+  animateChild,
+  animate,
+  style,
+} from '@angular/animations';
 
 @Component({
   selector: 'app-orders',
@@ -13,6 +21,21 @@ import { status } from '../../../enums/status.enum';
   imports: [DataDisplayerComponent, DatePipe, CommonModule],
   templateUrl: './orders.component.html',
   styleUrl: './orders.component.scss',
+  animations: [
+    trigger('fadeOut', [
+      transition(':leave', [
+        query(':leave', animateChild(), { optional: true }),
+        animate('150ms ease-in', style({ opacity: 0 })),
+      ]),
+    ]),
+    trigger('fadeIn', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        query(':enter', animateChild(), { optional: true }),
+        animate('250ms 250ms ease-out', style({ opacity: 1 })),
+      ]),
+    ]),
+  ],
 })
 export class OrdersComponent extends BaseDataComponent<Order> {
   private _tmpDataService = inject(TmpDataService);
