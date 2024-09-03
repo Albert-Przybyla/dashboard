@@ -17,9 +17,7 @@
       <th scope="col">Quantity</th>
       <th scope="col">Status</th>
       <th scope="col">Total</th>
-      <th scope="col" class="text-end">
-        <span> Actions </span>
-      </th>
+      <th scope="col">Actions</th>
     </tr>
     <ng-container body>
       @for(item of items; track item; let i = $index){
@@ -53,7 +51,7 @@
           >
         </td>
         <td>{{ item.Total | currency }}</td>
-        <td style="max-width: 108px" class="text-end">
+        <td style="max-width: 108px">
           <div class="btn btn-outline-secondary">Download Invoice</div>
         </td>
       </tr>
